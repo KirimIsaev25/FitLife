@@ -1,7 +1,3 @@
-import sys
-import io
-
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 print('Добро пожаловать!')
 user_name = input('Как вас зовут?')
 user_name = user_name.title()
@@ -18,7 +14,7 @@ water_l = water_ml / 1000
 result_water_l = round(water_l, 1)
 print(
     f"Для веса кг {user_weight}, и роста {user_height} м,"
-    f"ИМТ ≈ {result_bmi}, норма воды ≈, {result_water_l}"
+    f"ИМТ ≈ {result_bmi}, норма воды ≈, {result_water_l}",
 )
 print(f"Отчет для пользователя: {user_name}, {user_age} г")
 print(f"Твой Индекс Массы Тела: {result_bmi}")
