@@ -1,26 +1,22 @@
-# Проект FitLife - MVP версия 1.0
-
-
-# 1. Знакомство
-# TODO: Спроси у пользователя имя и сохрани в переменную user_name
-# TODO: Спроси возраст и сохрани в переменную user_age (не забудь преобразовать в число)
-
-
-# 2. Сбор данных
-# TODO: Запроси вес (в кг) и сохрани в user_weight (тип float)
-# TODO: Запроси рост (в метрах, например 1.75) и сохрани в user_height (тип float)
-
-
-# 3. Логика расчетов (Функции как "черный ящик": используем арифметику)
-# Формула ИМТ: вес разделить на (рост в квадрате)
-# TODO: Рассчитай bmi (Индекс массы тела)
-
-
-# Подсчет воды: вес * 30 мл
-# TODO: Рассчитай water_needed
-
-
-# 4. Вывод красивого результата
-# TODO: Используй f-строку, чтобы вывести приветствие, например: "Привет, Иван!"
-# TODO: Выведи возраст, ИМТ (округленный до 1 знака) и норму воды.
-print("Расчет окончен. Будьте здоровы!")
+print('Добро пожаловать')
+user_name = input ( 'Как вас зовут? ')
+user_name = user_name.title()
+user_age = input ( 'Сколько вам лет? ')
+user_age = int (user_age)
+user_weight = input ('Укажите свой вес в "кг" ')
+user_height = input ('Укажите свой рост "м" ')
+user_weight = float (user_weight)
+user_height = float (user_height)
+bmi = user_weight / (user_height ** 2) 
+result_bmi = round (bmi, 1)
+FIX = 30
+water_ml = user_weight * FIX 
+water_l = water_ml / 1000 
+result_water_l = round (water_l, 1)
+print('Для веса', user_weight , 'и роста' , user_height , 'ИМТ ≈',  result_bmi , 'норма воды ≈' , result_water_l)
+print('Отчет для пользователя:' , user_name , user_age)
+print('Твой Индекс Массы Тела:' , result_bmi)
+print('Рекомендуемая норма воды:' ,  result_water_l, 'л. в день')
+print()
+print()
+print('Расчет окончен. Будьте здоровы! ')
