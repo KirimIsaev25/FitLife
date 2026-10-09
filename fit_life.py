@@ -6,11 +6,12 @@ user_weight = input('Укажите свой вес "кг"')
 user_weight = float(user_weight)
 user_height = input('Укажите свой рост "м"')
 user_height = float(user_height)
+WATER_ML_PER_KG = 30
+WATER_ML_PER_L = 1000
 bmi = user_weight / (user_height ** 2)
 result_bmi = round(bmi, 1)
-FIX = 30
-water_ml = user_weight * FIX
-water_l = water_ml / 1000
+water_ml = user_weight * WATER_ML_PER_KG
+water_l = water_ml / WATER_ML_PER_L
 result_water_l = round(water_l, 1)
 print(
     f"Для веса кг {user_weight}, и роста {user_height} м,"
